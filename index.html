@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="weatherShow">
+        <div class="topData">
+
+
+            <h2 id="dayCurrShow">Tuesday</h2><span id="dateCurrShow">15 Jan 2019</span><svg
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-map-pin location-icon">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+            </svg><span id="cityCurrShow">Paris, FR</span>
+        </div>
+        <div class="bottomData">
+            <img src="http://openweathermap.org/img/wn/01n@2x.png" alt="" id="imgCurrShow">
+            <h1 id="tempCurrShow">29°C</h1>
+            <h3 id="descriptionCurrShow">Sunny</h3>
+        </div>
+        <div class="weatherBackgroundColor"></div>
+    </div>
+    <div class="rightShow">
+        <div class="today-info-container">
+            <div class="today-info">
+                <div class="precipitation"> <span class="title">PRECIPITATION</span><span class="value"
+                        id="precCurrShow">0 %</span>
+                    <div class="clear"></div>
+                </div>
+                <div class="humidity"> <span class="title">HUMIDITY</span><span class="value" id="humidityCurrShow">34
+                        %</span>
+                    <div class="clear"></div>
+                </div>
+                <div class="wind"> <span class="title">WIND</span><span class="value" id="currWindShow">0 km/h</span>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div class="otherDayWeather">
+            <div class="otherDataShow"> <img src="http://openweathermap.org/img/wn/01n@2x.png" alt=""
+                    class="imgOtherShow">
+                <h4 class="dayOtherShow">Tue</h4>
+                <h4 class="tempOtherShow">27°C</h4>
+            </div>
+            <div class="otherDataShow">
+                <img src="http://openweathermap.org/img/wn/01n@2x.png" alt="" class="imgOtherShow">
+                <h4 class="dayOtherShow">Wed</h4>
+                <h4 class="tempOtherShow">27°C</h4>
+            </div>
+            <div class="otherDataShow">
+                <img src="http://openweathermap.org/img/wn/01n@2x.png" alt="" class="imgOtherShow">
+                <h4 class="dayOtherShow">Thr</h4>
+                <h4 class="tempOtherShow">27°C</h4>
+            </div>
+            <div class="otherDataShow">
+                <img src="http://openweathermap.org/img/wn/01n@2x.png" alt="" class="imgOtherShow">
+                <h4 class="dayOtherShow">Fri</h4>
+                <h4 class="tempOtherShow">27°C</h4>
+            </div>
+        </div>
+        <div class="location-container">
+            <form id="selectDiv">
+                <select name="" id="unitGet">
+                    <option value="Metric" selected>°C</option>
+                    <option value="Imperial">°F</option>
+                </select>
+            </form>
+            <input type="text" id="cityName" placeholder="Enter City Name">
+
+        </div>
+    </div>
+
+</body>
+<script src="app.js"></script>
+
+</html>
