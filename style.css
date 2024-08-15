@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap');
+
+:root {
+    --gradient: linear-gradient(135deg, #3286ad 10%, #a14664 100%);
+}
+
+* {
+    box-sizing: border-box;
+    line-height: 1.25em;
+}
+
+.clear {
+    clear: both;
+}
+
+body {
+
+    background-color: #343d4b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.weatherShow {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    height: 380px;
+    border-radius: 25px;
+    background-image: var(--gradient);
+    background-size: cover;
+    width: 300px;
+    box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.2);
+    color: white !important;
+}
+
+
+.weatherBackgroundColor {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(179, 47, 47, 0.1);
+    border-radius: 25px;
+}
+
+.weatherShow img {
+    margin: -20px;
+}
+
+#dayCurrShow {
+    margin: 0;
+}
+
+#cityCurrShow {
+    display: inline-block;
+}
+
+#dateCurrShow {
+    display: block;
+}
+
+.location-icon {
+    display: inline-block;
+    height: 0.8em;
+    width: auto;
+    margin-right: 5px;
+}
+
+#tempCurrShow {
+    margin: 0;
+    font-weight: 700;
+    font-size: 4em;
+}
+
+#descriptionCurrShow {
+    margin: 0;
+}
+
+.rightShow {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    background-color: #0b181b;
+    border-radius: 0px 10px 10px 0px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.today-info {
+    padding: 15px;
+    margin: 0 10px 10px 10px;
+    box-shadow: 0 0 50px -5px rgba(0, 0, 0, 1);
+    border-radius: 10px;
+}
+
+.today-info>div:not(:last-child) {
+    margin: 0 0 10px 0;
+}
+
+.today-info>div .title {
+    float: left;
+    font-weight: 700;
+}
+
+.today-info>div .value {
+    float: right;
+}
+
+.weekShow {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 10px;
+    box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    /* background: # */
+}
+
+.otherDayWeather {
+    display: flex;
+    margin: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 0 50px -5px rgba(0, 0, 0, 1);
+    border-radius: 10px;
+    justify-content: space-between;
+
+    /* width: 30%; */
+}
+
+.otherDayWeather h4 {
+    padding: 0px;
+    margin: 0px;
+}
+
+.otherDataShow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+.otherDataShow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgba(1, 1, 2, 0.4);
+}
+
+
+.otherDataShow>img {
+    margin: -20px;
+    width: 100px;
+    height: 100px;
+}
+
+.otherDataShow h4 {
+    padding-top: 10px;
+}
+
+
+.location-button {
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    background-image: var(--gradient);
+    color: #ffffff;
+    font-weight: 700;
+    box-shadow: 0 0 30px -5px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+.location-container {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+input {
+    height: 2.5rem;
+    background: #f5f5f5;
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 1rem;
+    padding: 0 1.5rem 0 1.5rem;
+    border: 1px solid #99bdb452;
+    font-size: 1rem;
+    width: 60%;
+    margin-top: 20px;
+    background-color: transparent;
+    font-family: Georgia, 'Times New Roman', Times, serif !important;
+}
+
+select {
+    background-color: transparent;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    border: none;
+    border: 1px solid #99bdb452;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 1rem;
+    appearance: none;
+    width: 60px;
+
+}
+
+option {
+    color: black;
+
+}
+
+#selectDiv {
+    position: relative;
+}
+
+#selectDiv::before {
+    content: '▼';
+    position: absolute;
+    top: 32px;
+    left: 35px;
+}
+
+@media screen and (max-width: 624px) {
+    body {
+        flex-direction: column;
+    }
+
+    .rightShow {
+        width: 330px;
+        height: 380px;
+        border-radius: 25px;
+        margin-top: 25px;
+    }
+
+    .weatherShow {
+        width: 330px;
+    }
+}
